@@ -23,7 +23,7 @@ function CoffeeShop() {
       </div>
       <div className="flex justify-between flex-wrap">
         {coffeeShops?.map((shop) => (
-          <div className="my-2 md:w-[50%] xs:w-[100%]">
+          <div className="my-2 lg:w-[33.33%] md:w-[50%] xs:w-[100%]">
             <div className="flex items-start space-x-4">
               <img
                 src="https://via.placeholder.com/100"
@@ -48,7 +48,7 @@ function CoffeeShop() {
                     />
                   </svg>
                   <span className="ml-1">{shop.averageRating}</span>
-                  <span className="ml-1">{`${shop.totalReviews} reviews`}</span>
+                  <span className="ml-1">({`${shop.totalReviews} reviews`})</span>
                 </div>
                 <div className="text-sm text-gray-500">3.8 miles</div>
               </div>
