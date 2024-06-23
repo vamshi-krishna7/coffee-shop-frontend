@@ -25,7 +25,7 @@ function CoffeeShop() {
       <div className="flex justify-between flex-wrap">
         {coffeeShops?.map((shop, index) => (
           <div
-          className="p-2 pr-2 rounded-lg lg:w-[33.33%] md:w-[50%] xs:w-[100%] hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
+          className="md:p-2 pr-2 rounded-lg lg:w-[33.33%] md:w-[50%] xs:w-[100%] hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
             onClick={() => navigate(`coffee-shop/${shop._id}/products`)}
             key={index}
           >
