@@ -30,7 +30,7 @@ function CoffeeShop() {
           <div className="animate-spin mx-auto rounded-full border-b-2 border-gray-800 h-10 w-10"></div>
         </div>
       ) : (
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center md:justify-between flex-wrap">
           {coffeeShops?.map((shop, index) => (
             <div
               className="rounded-lg shadow-md hover:shadow-lg cursor-pointer w-[270px]  m-2"
