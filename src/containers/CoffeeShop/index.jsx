@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { coffeeShopActions } from "./slice";
-import { selectCoffeeShops, selectLoadingCoffeeShops, selectSearchCoffeeShops } from "./slice/selector";
+import {
+  selectCoffeeShops,
+  selectLoadingCoffeeShops,
+  selectSearchCoffeeShops,
+} from "./slice/selector";
 
 function CoffeeShop() {
   const dispatch = useDispatch();
@@ -17,14 +21,16 @@ function CoffeeShop() {
   return (
     <div className="mx-4">
       <div className="relative">
-        <h2 className="text-xl text-center font-semibold mb-4">Featured coffee shops</h2>
+        <h2 className="text-xl text-center font-semibold mb-4">
+          Featured coffee shops
+        </h2>
       </div>
       {isLoading ? (
         <div className="flex justify-center items-center h-48">
-          <div className="animate-spin mx-auto rounded-full border-b-2 border-gray-800 h-10 w-10" ></div>
+          <div className="animate-spin mx-auto rounded-full border-b-2 border-gray-800 h-10 w-10"></div>
         </div>
       ) : (
-        <div className="flex xs:justify-center md:justify-between flex-wrap">
+        <div className="flex justify-center flex-wrap">
           {coffeeShops?.map((shop, index) => (
             <div
               className="rounded-lg shadow-md hover:shadow-lg cursor-pointer w-[270px]  m-2"
