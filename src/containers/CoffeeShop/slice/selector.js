@@ -13,10 +13,10 @@ export const selectSearchCoffeeShops = createSelector(
   (state) => state.search
 );
 
-export const selectSearchAndFilter = createSelector(
+export const selectSearchAndSortBy = createSelector(
   [coffeeShopsState],
   (state) => ({
     search: state.search,
-    filterBy: state.filterBy,
+    sortBy: state.sortBy,
   })
 );

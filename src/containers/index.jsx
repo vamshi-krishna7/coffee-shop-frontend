@@ -9,8 +9,6 @@ function AppRouter() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          {/* <Route path="/wakeup" element={<WakeupCallPage />} /> */}
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
         </Routes>
       </BrowserRouter>
     </Container>

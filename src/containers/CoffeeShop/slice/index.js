@@ -12,6 +12,17 @@ export const initialState = {
     loading: false,
     error: false,
   },
+  search: "",
+  sortBy: "",
+  filterBy: {
+    wheelchairAccessible: false,
+    parkingAvailable: false,
+    freeWifi: false,
+    mobileWallets: false,
+    cash: false,
+    card: false,
+    openNow: false,
+  },
 };
 
 const slice = createSlice({
@@ -19,11 +30,9 @@ const slice = createSlice({
   initialState,
   reducers: {
     fetchCoffeeShops: (state) => {
-      console.log("fired");
       state.coffeeShops.loading = true;
     },
     fetchCoffeeShopsSuccess: (state, action) => {
-      console.log("🚀 ~ action:", action);
       state.coffeeShops.success = true;
       state.coffeeShops.loading = false;
       state.coffeeShops.error = false;
@@ -34,10 +43,12 @@ const slice = createSlice({
       state.coffeeShops.success = false;
       state.coffeeShops.error = action.payload?.message || "error occured";
     },
-    // updateSearchOrFilterParams:(state, action) => {
-    //   console.log("🚀 ~ action:", state.search, action);
-    //   state.search = action.payload;
-    // }
+    updateSearchBy: (state, action) => {
+      state.search = action.payload.search;
+    },
+    updateSortBy: (state, action) => {
+      state.sortBy = action.payload.sortBy;
+    },
   },
 });
 

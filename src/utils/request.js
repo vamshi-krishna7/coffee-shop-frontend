@@ -28,12 +28,9 @@ export default async function request(
   contentTypeHeader = true
 ) {
   let url = requestURL;
-  console.log("🚀 ~ url:", url)
   const config = { ...options };
   const apiEndpointBase = import.meta.env.VITE_COFFEE_SHOP_API;
   url = `${apiEndpointBase}${requestURL}`;
-  console.log("🚀 ~ apiEndpointBase:", apiEndpointBase)
-  console.log("🚀 ~ url:", url)
   config.url = url;
 
   // Setting URL
@@ -45,6 +42,5 @@ export default async function request(
   config.headers = { ...config.headers, ...restHeaders };
 
   const res = await httpRequest(config);
-  console.log("🚀 ~ res:", res)
   return res;
 }

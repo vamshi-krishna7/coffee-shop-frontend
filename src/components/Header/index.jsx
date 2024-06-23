@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { coffeeShopActions } from "../../containers/CoffeeShop/slice";
-import Filter from "../Filter";
+import FilterDropMenu from "../FilterDropMenu";
 import Search from "../Search";
 import { AiOutlineMenu } from "react-icons/ai";
 import MenuItem from "../MenuItem";
-import DropDownMenu from "../DropDownMenu";
+import DropDownMenu from "../SortByDropDownMenu";
 import Banner from "../Banner";
 
 function Header() {
@@ -19,6 +19,7 @@ function Header() {
       />
       <div className="flex justify-between items-center mx-4 my-4">
         <Search />
+        <FilterDropMenu />
         <DropDownMenu />
       </div>
     </div>

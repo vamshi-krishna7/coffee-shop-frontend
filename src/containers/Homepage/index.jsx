@@ -8,7 +8,6 @@ function Homepage() {
 
 
   const coffeeShops = useSelector(selectCoffeeShops);
-  console.log("🚀 ~ CoffeeShop ~ coffeeShops:", coffeeShops)
   return (
     <>
       <Header />

@@ -6,20 +6,18 @@ import { selectSearchCoffeeShops } from "../../containers/CoffeeShop/slice/selec
 
 function Search() {
   const dispatch = useDispatch();
-  const [search, setSearch] = useState({ search: "" });
 
-  useEffect(() => {
-    if (search !== "") {
-      dispatch(coffeeShopActions.fetchCoffeeShops(search));
-    }
-  }, [search]);
+  const searchCoffeeShops = useSelector(selectSearchCoffeeShops);
+
 
   return (
     <input
       type="text"
       placeholder="cafe latte ... "
-      onChange={(e) => setSearch({ search: e.target.value })}
-      value={search.search}
+      onChange={(e) =>
+        dispatch(coffeeShopActions.updateSearchBy({search: e.target.value}))
+      }
+      value={searchCoffeeShops}
       className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
     />
   );
