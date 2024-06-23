@@ -20,3 +20,8 @@ export const selectSearchAndSortBy = createSelector(
     sortBy: state.sortBy,
   })
 );
+
+export const selectLoadingCoffeeShops = createSelector(
+  [coffeeShopsState],
+  (state) => state.coffeeShops.loading
+);

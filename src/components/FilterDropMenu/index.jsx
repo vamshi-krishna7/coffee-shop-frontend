@@ -14,10 +14,10 @@ const Dropdown = ({ handleApplyFilters }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mx-2"> 
       <button
         onClick={toggleDropdown}
-        className="relative md:p-4 w-[45px] h-[45px] px-4 py-3 rounded-full hover:bg-neutral-100 transition font-semibold cursor-pointer flex items-center"
+        className="relative md:p-4 w-[45px] h-[45px] px-4 py-3 rounded-full hover:bg-neutral-100 border-[1px] transition font-semibold cursor-pointer flex items-center"
       >
         <FaFilter className="mx-auto" />
       </button>

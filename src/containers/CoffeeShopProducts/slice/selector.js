@@ -13,3 +13,9 @@ export const selectProducts = createSelector(
   [coffeeShopProductState],
   (state) => state.products
 );
+
+
+export const selectLoading = createSelector(
+  [coffeeShopProductState],
+  (state) => state.loading
+);

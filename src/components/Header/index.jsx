@@ -19,7 +19,7 @@ function Header() {
       />
       <div className="flex justify-between items-center mx-4 my-4">
         <Search />
-        <div className="flex mx-2">
+        <div className="flex ">
           <FilterDropMenu />
           <DropDownMenu />
         </div>

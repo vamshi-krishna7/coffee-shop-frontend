@@ -7,7 +7,6 @@ function* fetchCoffeeShopProductsSaga(action) {
     let apiUrl = `/api/v1/coffee-shop/${action.payload}/products`;
 
     const response = yield call(request, apiUrl);
-    console.log("🚀 ~ function*fetchCoffeeShopProductsSaga ~ response:", response)
     yield put(coffeeShopProductActions.fetchCoffeeShopsProductSuccess(response));
   } catch (error) {}
 }

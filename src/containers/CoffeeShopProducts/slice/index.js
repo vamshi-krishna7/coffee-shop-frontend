@@ -21,7 +21,6 @@ const slice = createSlice({
       state.loading = true;
     },
     fetchCoffeeShopsProductSuccess: (state, action) => {
-      console.log("🚀 ~ action:", action);
       state.success = true;
       state.loading = false;
       state.error = false;
