@@ -15,12 +15,14 @@ function ProductList({ data, shopName }) {
           >
             <div className="flex items-start space-x-4">
               <img
-                src="https://via.placeholder.com/100"
+                src={"/product-1.jpeg" || "https://via.placeholder.com/100"}
                 alt="Coffee shop"
                 className="w-24 h-24 rounded-lg object-cover"
               />
               <div className="flex-1">
-                <h3 className="text-md font-semibold">{el.name}</h3>
+                <h3 className="text-md font-semibold text-gray-900 hover:letter-spacing-1 transition duration-300">
+                  {el.name}
+                </h3>
                 <div className="flex items-center text-sm text-gray-500">
                   <span className="ml">{el.description}</span>
                 </div>
