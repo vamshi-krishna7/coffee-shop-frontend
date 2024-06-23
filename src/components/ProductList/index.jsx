@@ -11,7 +11,7 @@ function ProductList({ data, shopName, isLoading }) {
           <div className="animate-spin mx-auto rounded-full border-b-2 border-gray-800 h-10 w-10"></div>
         </div>
       ) : (
-        <div className="flex justify-between flex-wrap">
+        <div className="flex xs:justify-center md:justify-between flex-wrap">
           {data?.map((el, index) => (
             <div
               className="md:p-2 pr-2 rounded-lg lg:w-[33.33%] md:w-[50%] xs:w-[100%] hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"

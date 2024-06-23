@@ -10,6 +10,7 @@ function AppRouter() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/coffee-shop" element={<Homepage />} />
           <Route
             path="/coffee-shop/:id/products"
             element={<CoffeeShopProduct />}
