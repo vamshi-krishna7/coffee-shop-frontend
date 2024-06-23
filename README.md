@@ -1,8 +1,29 @@
-# React + Vite
+# Coffee Shop Product Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React project for managing coffee shop products, built using Redux Toolkit and Redux-Saga.
 
-Currently, two official plugins are available:
+# Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have the following installed on your system:
+
+- Node.js (>= 14.x)
+- yarn (>= 1.x)
+
+# Install the dependencies
+yarn install
+
+# Running the Application
+yarn dev
+
+# Project Structure
+src/
+|-- components/      # React components
+|-- containers/      # React pages
+    |-- slices/          # Redux slices and sagas
+    |-- index.js     # Main App Router component
+|-- store/           # Redux store setup and configuration
+|   |-- redux-injectors.js
+|          
+|-- main.js         # Entry point
+
+
