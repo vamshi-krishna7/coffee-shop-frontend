@@ -52,7 +52,6 @@ function handleError(error) {
 async function httpRequest(config) {
   try {
     const response = await axios(config);
-    console.log("handleSuccess(response)", handleSuccess(response))
     return handleSuccess(response);
   } catch (error) {
     handleError(error);
