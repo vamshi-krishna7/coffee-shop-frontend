@@ -1,4 +1,4 @@
-# Coffee Shop Product Management
+# Coffee Shop Frontend
 
 This is a React project for managing coffee shop products, built using Redux Toolkit and Redux-Saga.
 
